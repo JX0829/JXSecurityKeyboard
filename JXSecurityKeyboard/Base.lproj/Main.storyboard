@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Security Keyboard View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="JXSecurityKeyboardViewController" customModule="JXSecurityKeyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="安全键盘" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGk-K0-XTE">
+                                <rect key="frame" x="122" y="138" width="130" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="数字键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1bn-Fh-qxv">
+                                <rect key="frame" x="122" y="188" width="130" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="我会被遮住" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysF-ss-MEQ">
+                                <rect key="frame" x="139" y="487" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1bn-Fh-qxv" firstAttribute="width" secondItem="kGk-K0-XTE" secondAttribute="width" id="0QN-0J-MZS"/>
+                            <constraint firstItem="kGk-K0-XTE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="118" id="1Fm-EB-hyj"/>
+                            <constraint firstItem="kGk-K0-XTE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="6bA-BL-Tx0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kGk-K0-XTE" secondAttribute="trailing" constant="50" id="Ik9-bE-18M"/>
+                            <constraint firstItem="ysF-ss-MEQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NWZ-Sj-kL8"/>
+                            <constraint firstItem="ysF-ss-MEQ" firstAttribute="width" secondItem="1bn-Fh-qxv" secondAttribute="width" id="QZW-1K-cTp"/>
+                            <constraint firstItem="1bn-Fh-qxv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qul-6b-XJD"/>
+                            <constraint firstItem="1bn-Fh-qxv" firstAttribute="height" secondItem="kGk-K0-XTE" secondAttribute="height" id="T01-wB-Qc1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ysF-ss-MEQ" secondAttribute="bottom" constant="150" id="aBb-yU-7AJ"/>
+                            <constraint firstItem="kGk-K0-XTE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="c4B-dn-PCr"/>
+                            <constraint firstItem="ysF-ss-MEQ" firstAttribute="height" secondItem="1bn-Fh-qxv" secondAttribute="height" id="kNp-OS-rbF"/>
+                            <constraint firstItem="1bn-Fh-qxv" firstAttribute="top" secondItem="kGk-K0-XTE" secondAttribute="bottom" constant="20" id="zzm-Le-Ofk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myTextField" destination="kGk-K0-XTE" id="od0-Pj-Ybo"/>
+                        <outlet property="myTextField1" destination="1bn-Fh-qxv" id="p9W-X2-r0z"/>
+                        <outlet property="myTextField2" destination="ysF-ss-MEQ" id="SUC-Nk-UnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="40.929535232383813"/>
+        </scene>
+    </scenes>
+</document>
